@@ -30,6 +30,15 @@
                                         <span><strong>23k</strong> followers</span>
                                         <span><strong>212</strong> following</span>
                                     </div>
+
+                                    <!-- Bio / Description Text -->
+                                    <div class="mt-3 text-sm"><strong>quantumclub</strong></div>
+                                    <div class="mt-1 text-sm text-gray-700">
+                                        {{ __('Learn quantum computing concepts, explore breakthroughs, and stay updated with the future of computation.') }}
+                                    </div>
+                                    <div class="mt-1 text-blue-500 hover:underline text-sm">
+                                        <a href="#">www.quantum.org</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
