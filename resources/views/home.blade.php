@@ -5,9 +5,9 @@
             <!-- Main Grid Container -->
             <div class="grid grid-cols-12 gap-6">
                 <!-- Empty space on the left (hidden on mobile) -->
-                <div class="hidden md:block md:col-span-2"></div>
+                <div class="hidden md:block md:col-span-1"></div>
                 <!-- Content Wrapper - Same Width for All Sections -->
-                <div class="col-span-12 md:col-span-10">
+                <div class="col-span-12 md:col-span-11">
                     <!-- Inner Responsive Wrapper -->
                     <div class="w-full max-w-screen-sm mx-auto md:max-w-2xl">
                         <!-- Profile Section (Logo + Text) -->
