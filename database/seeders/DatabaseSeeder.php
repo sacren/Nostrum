@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             array_merge(
                 User::factory()->definition(),
                 [ 'email' => 'test@example.com' ],
-                [ 'name' => 'Test User' ]
+                [ 'name' => 'Test User' ],
+                [ 'username' => 'test' ]
             )
         );
     }
