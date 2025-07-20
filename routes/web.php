@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 
-Route::get('home', ProfileController::class.'@index')
+Route::get('home', [ProfileController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('home');
 
