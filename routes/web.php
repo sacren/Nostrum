@@ -17,4 +17,8 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+Route::resource('home', ProfileController::class)
+    ->only(['show'])
+    ->middleware(['auth', 'verified']);
+
 require __DIR__.'/auth.php';
