@@ -21,7 +21,7 @@
                             </div>
                             <!-- Text Content -->
                             <div class="flex flex-col justify-center text-center md:text-left">
-                                <h1 class="font-bold text-xl mb-2">{{ $user->username ?? 'Anonymous' }}</h1>
+                                <h1 class="font-bold text-xl mb-2">{{ $user->username }}</h1>
                                 <div
                                     class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-1 text-gray-600">
                                     <span><strong>153</strong> posts</span>

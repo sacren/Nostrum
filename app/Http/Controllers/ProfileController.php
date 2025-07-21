@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -12,7 +13,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+        return view('home', compact('user'));
     }
 
     /**
@@ -34,9 +36,9 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($user)
+    public function show($id)
     {
-        $user = User::find($user);
+        $user = User::findOrFail($id);
         return view('home', compact('user'));
     }
 
