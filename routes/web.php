@@ -7,7 +7,7 @@ Route::view('/', 'welcome');
 
 Route::get('home', [ProfileController::class, 'index'])
     ->middleware(['auth', 'verified'])
-    ->name('home');
+    ->name('home.index');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
