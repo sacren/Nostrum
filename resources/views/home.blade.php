@@ -29,12 +29,12 @@
                                     <span><strong>212</strong> following</span>
                                 </div>
                                 <!-- Bio / Description Text -->
-                                <div class="mt-3 text-sm"><strong>quantumclub</strong></div>
+                                <div class="mt-3 text-sm"><strong>{{ $profile->title }}</strong></div>
                                 <div class="mt-1 text-sm text-gray-700">
-                                    {{ __('Learn quantum computing concepts, explore breakthroughs, and stay updated with the future of computation.') }}
+                                    {{ $profile->description }}
                                 </div>
                                 <div class="mt-1 text-blue-500 hover:underline text-sm">
-                                    <a href="#">www.quantum.org</a>
+                                    <a href="#">{{ $profile->url }}</a>
                                 </div>
                             </div>
                         </div>
