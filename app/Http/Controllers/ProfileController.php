@@ -42,10 +42,7 @@ class ProfileController extends Controller
     {
         $user = User::with('profile')->findOrFail($id);
 
-        return view('home', [
-            'user' => $user,
-            'profile' => $user->profile,
-        ]);
+        return view('home', compact('user'));
     }
 
     /**

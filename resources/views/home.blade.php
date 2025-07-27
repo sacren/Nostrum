@@ -29,12 +29,12 @@
                                     <span><strong>212</strong> following</span>
                                 </div>
                                 <!-- Bio / Description Text -->
-                                <div class="mt-3 text-sm"><strong>{{ $profile->title ?? 'No Title' }}</strong></div>
+                                <div class="mt-3 text-sm"><strong>{{ $user->profile->title ?? 'No Title' }}</strong></div>
                                 <div class="mt-1 text-sm text-gray-700">
-                                    {{ $profile->description ?? 'No Description' }}
+                                    {{ $user->profile->description ?? 'No Description' }}
                                 </div>
                                 <div class="mt-1 text-blue-500 hover:underline text-sm">
-                                    <a href="{{ $profile?->url ?? '#' }}">{{ $profile?->url ?? 'No URL' }}</a>
+                                    <a href="{{ $user->profile?->url ?? '#' }}">{{ $user->profile?->url ?? 'No URL' }}</a>
                                 </div>
                             </div>
                         </div>
