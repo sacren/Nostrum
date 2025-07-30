@@ -12,17 +12,6 @@ class Profile extends Model
     use HasFactory;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'title',
-        'description',
-        'url',
-    ];
-
-    /**
      * Get the user that owns the Profile
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
