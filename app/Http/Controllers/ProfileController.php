@@ -16,7 +16,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         $profile = $user->profile;
 
-        return view('home', compact('user', 'profile'));
+        return view('profiles.index', compact('user', 'profile'));
     }
 
     /**
@@ -42,7 +42,7 @@ class ProfileController extends Controller
     {
         $user = User::with('profile')->findOrFail($id);
 
-        return view('home', compact('user'));
+        return view('profiles.index', compact('user'));
     }
 
     /**

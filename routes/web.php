@@ -13,7 +13,7 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-Route::resource('home', ProfileController::class)
+Route::resource('profiles', ProfileController::class)
     ->only(['index', 'show'])
     ->middleware(['auth', 'verified']);
 
