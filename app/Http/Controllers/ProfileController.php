@@ -41,7 +41,7 @@ class ProfileController extends Controller
     {
         $user = User::with('profile')->findOrFail($id);
 
-        return view('profiles.index', compact('user'));
+        return view('profiles.show', compact('user'));
     }
 
     /**
