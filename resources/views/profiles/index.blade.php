@@ -21,7 +21,13 @@
                             </div>
                             <!-- Text Content -->
                             <div class="flex flex-col justify-center text-center md:text-left">
-                                <h1 class="font-bold text-xl mb-2">{{ $user->username }}</h1>
+                                <div class="flex flex-col md:flex-row md:items-center md:justify-between w-full mb-2">
+                                    <h1 class="font-bold text-xl mb-2">{{ $user->username }}</h1>
+                                    <div
+                                        class="text-blue-500 hover:text-blue-700 text-sm font-medium whitespace-nowrap mt-1 md:mt-0">
+                                        <a href="#">Add New Post</a>
+                                    </div>
+                                </div>
                                 <div
                                     class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-1 text-gray-600">
                                     <span><strong>153</strong> posts</span>
@@ -29,12 +35,16 @@
                                     <span><strong>212</strong> following</span>
                                 </div>
                                 <!-- Bio / Description Text -->
-                                <div class="mt-3 text-sm"><strong>{{ $user->profile->title ?? 'No Title' }}</strong></div>
+                                <div class="mt-3 text-sm">
+                                    <strong>{{ $user->profile->title ?? 'No Title' }}</strong>
+                                </div>
                                 <div class="mt-1 text-sm text-gray-700">
                                     {{ $user->profile->description ?? 'No Description' }}
                                 </div>
                                 <div class="mt-1 text-blue-500 hover:underline text-sm">
-                                    <a href="{{ $user->profile?->url ?? '#' }}">{{ $user->profile?->url ?? 'No URL' }}</a>
+                                    <a href="{{ $user->profile?->url ?? '#' }}">
+                                        {{ $user->profile?->url ?? 'No URL' }}
+                                    </a>
                                 </div>
                             </div>
                         </div>
