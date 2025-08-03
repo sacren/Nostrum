@@ -29,7 +29,7 @@
                                     <h1 class="font-bold text-xl mb-2">{{ $user->username }}</h1>
                                     <div
                                         class="text-blue-500 hover:text-blue-700 text-sm font-medium whitespace-nowrap mt-1 md:mt-0">
-                                        <a href="#">Add New Post</a>
+                                        <a href="{{ route('posts.create') }}">Add New Post</a>
                                     </div>
                                 </div>
                                 <div
