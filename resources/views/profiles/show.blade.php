@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot name="title">
+        {{ __('Profile Show') }}
+    </x-slot>
+
     <x-slot name="header">
         <!-- Outer wrapper with responsive padding -->
         <div class="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-4 w-full bg-white">
