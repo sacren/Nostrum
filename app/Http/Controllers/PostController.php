@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -28,7 +29,26 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'caption' => 'nullable|string|max:255',
+        ]);
+
+        $post = new Post();
+        $post->user_id = Auth::id();
+        $post->caption = $request->caption;
+
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $filename = time() . '.' . $request->image->extension();
+            $request->image->storeAs('public/posts', $filename);
+            $post->image_path = 'posts/' . $filename;
+        }
+
+        $post->save();
+
+        return redirect()->route('profiles.index')
+            ->with('success', 'Post created successfully!');
     }
 
     /**
