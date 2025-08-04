@@ -18,6 +18,8 @@ Route::resource('profiles', ProfileController::class)
     ->only(['index', 'show'])
     ->middleware(['auth', 'verified']);
 
+Route::get('posts', fn () => abort(404));
+
 Route::resource('posts', PostController::class)
     ->only(['create', 'store'])
     ->middleware(['auth', 'verified']);
