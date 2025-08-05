@@ -18,10 +18,8 @@ Route::resource('profiles', ProfileController::class)
     ->only(['index', 'show'])
     ->middleware(['auth', 'verified']);
 
-Route::get('posts', fn () => abort(404));
-
 Route::resource('posts', PostController::class)
-    ->only(['create', 'store'])
+    ->only(['index', 'create', 'store'])
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
